@@ -1,0 +1,19 @@
+[2025-05-30T05:44:59.233+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-30T05:44:59.252+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_to_sqlite_dag.load_csv_to_sqlite manual__2025-05-30T05:44:57.438558+00:00 [queued]>
+[2025-05-30T05:44:59.264+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_to_sqlite_dag.load_csv_to_sqlite manual__2025-05-30T05:44:57.438558+00:00 [queued]>
+[2025-05-30T05:44:59.264+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2025-05-30T05:44:59.279+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): load_csv_to_sqlite> on 2025-05-30 05:44:57.438558+00:00
+[2025-05-30T05:44:59.292+0000] {standard_task_runner.py:72} INFO - Started process 216 to run task
+[2025-05-30T05:44:59.297+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'csv_to_sqlite_dag', 'load_csv_to_sqlite', 'manual__2025-05-30T05:44:57.438558+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/csv_to_sqlite_dag.py', '--cfg-path', '/tmp/tmp3gz_7l43']
+[2025-05-30T05:44:59.302+0000] {standard_task_runner.py:105} INFO - Job 26: Subtask load_csv_to_sqlite
+[2025-05-30T05:44:59.330+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-30T05:44:59.383+0000] {task_command.py:467} INFO - Running <TaskInstance: csv_to_sqlite_dag.load_csv_to_sqlite manual__2025-05-30T05:44:57.438558+00:00 [running]> on host 1232a4f48263
+[2025-05-30T05:44:59.501+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='csv_to_sqlite_dag' AIRFLOW_CTX_TASK_ID='load_csv_to_sqlite' AIRFLOW_CTX_EXECUTION_DATE='2025-05-30T05:44:57.438558+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-30T05:44:57.438558+00:00'
+[2025-05-30T05:44:59.502+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-30T05:44:59.663+0000] {logging_mixin.py:190} INFO - Loaded 31 records into table 'sum_data' in SQLite database.
+[2025-05-30T05:44:59.664+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-05-30T05:44:59.674+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-05-30T05:44:59.674+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=csv_to_sqlite_dag, task_id=load_csv_to_sqlite, run_id=manual__2025-05-30T05:44:57.438558+00:00, execution_date=20250530T054457, start_date=20250530T054459, end_date=20250530T054459
+[2025-05-30T05:44:59.714+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-05-30T05:44:59.733+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-30T05:44:59.734+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

@@ -1,0 +1,18 @@
+[2025-05-28T13:47:24.878+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-28T13:47:24.916+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_hello_world.say_hello manual__2025-05-28T13:47:24.429390+00:00 [queued]>
+[2025-05-28T13:47:24.928+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_hello_world.say_hello manual__2025-05-28T13:47:24.429390+00:00 [queued]>
+[2025-05-28T13:47:24.929+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2025-05-28T13:47:24.952+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): say_hello> on 2025-05-28 13:47:24.429390+00:00
+[2025-05-28T13:47:24.965+0000] {standard_task_runner.py:72} INFO - Started process 196 to run task
+[2025-05-28T13:47:24.982+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'simple_hello_world', 'say_hello', 'manual__2025-05-28T13:47:24.429390+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/simple_hello_world.py', '--cfg-path', '/tmp/tmp8wmdrk2m']
+[2025-05-28T13:47:24.984+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask say_hello
+[2025-05-28T13:47:25.300+0000] {task_command.py:467} INFO - Running <TaskInstance: simple_hello_world.say_hello manual__2025-05-28T13:47:24.429390+00:00 [running]> on host 1be2a669f763
+[2025-05-28T13:47:25.716+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='simple_hello_world' AIRFLOW_CTX_TASK_ID='say_hello' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T13:47:24.429390+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T13:47:24.429390+00:00'
+[2025-05-28T13:47:25.717+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-28T13:47:25.747+0000] {logging_mixin.py:190} INFO - Hello World from Airflow!
+[2025-05-28T13:47:25.748+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-05-28T13:47:25.760+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-05-28T13:47:25.761+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=simple_hello_world, task_id=say_hello, run_id=manual__2025-05-28T13:47:24.429390+00:00, execution_date=20250528T134724, start_date=20250528T134724, end_date=20250528T134725
+[2025-05-28T13:47:25.807+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-05-28T13:47:25.832+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-28T13:47:25.834+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
